@@ -15,6 +15,7 @@ namespace Prototype.Infra.Data.Mappings.Entities
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Quantidade).IsRequired();
+            builder.Property(x => x.Descricao).IsRequired().HasMaxLength(300);
             builder.Property(x => x.Valor).IsRequired().HasColumnType("decimal(18,2)");
 
             builder.HasOne(x => x.Produto).WithOne().HasForeignKey<Carrinho>(x => x.Id_Produto);

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prototype.Infra.Data;
 
 namespace Prototype.Infra.Data.Migrations
 {
     [DbContext(typeof(PrototypeDataContext))]
-    partial class PrototypeDataContextModelSnapshot : ModelSnapshot
+    [Migration("20210406023257_DescricaoCarrinho")]
+    partial class DescricaoCarrinho
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,9 +80,7 @@ namespace Prototype.Infra.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(300)")
-                        .HasMaxLength(300);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("Id_Produto")
                         .HasColumnType("uniqueidentifier");
@@ -154,7 +154,7 @@ namespace Prototype.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Ultima_Modificacao")
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 4, 5, 23, 37, 41, 92, DateTimeKind.Local).AddTicks(6900));
+                        .HasDefaultValue(new DateTime(2021, 4, 5, 23, 32, 57, 223, DateTimeKind.Local).AddTicks(2625));
 
                     b.Property<DateTime>("RegisterDate")
                         .HasColumnType("datetime2");
@@ -184,7 +184,7 @@ namespace Prototype.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Data_Tramitacao")
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 4, 5, 23, 37, 41, 99, DateTimeKind.Local).AddTicks(4125));
+                        .HasDefaultValue(new DateTime(2021, 4, 5, 23, 32, 57, 230, DateTimeKind.Local).AddTicks(1498));
 
                     b.Property<Guid?>("DocumentoId")
                         .HasColumnType("uniqueidentifier");
@@ -274,8 +274,7 @@ namespace Prototype.Infra.Data.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("nvarchar(300)")
-                        .HasMaxLength(300);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Leve")
                         .HasColumnType("int");

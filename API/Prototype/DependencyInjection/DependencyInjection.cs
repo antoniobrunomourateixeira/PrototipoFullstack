@@ -33,6 +33,7 @@ namespace Prototype.Api.DependencyInjection
             services.AddScoped<IDocumentoService, DocumentoService>();
             services.AddScoped<IPromocaoService, PromocaoService>();
             services.AddScoped<IProdutoService, ProdutoService>();
+            services.AddScoped<ICarrinhoService, CarrinhoService>();
             services.AddScoped<IUnitOfWork, UnitOfWork<PrototypeDataContext>>();
             services.AddScoped<IUser, UserNet>();
         }
@@ -43,6 +44,7 @@ namespace Prototype.Api.DependencyInjection
             services.AddScoped<DocumentoHandler, DocumentoHandler>();
             services.AddScoped<PromocaoHandler, PromocaoHandler>();
             services.AddScoped<ProdutoHandler, ProdutoHandler>();
+            services.AddScoped<CarrinhoHandler, CarrinhoHandler>();
         }
     }
 

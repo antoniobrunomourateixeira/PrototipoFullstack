@@ -15,7 +15,7 @@ namespace Prototype.Domain.Commands.Input.Promocao
         {
             AddNotifications(new Contract()
            .Requires()
-           .HasMaxLen(Descricao, 80, "Descricao", "O nome não pode ter mais de 80 caracteres")
+           .HasMaxLen(Descricao, 300, "Descricao", "O nome não pode ter mais de 80 caracteres")
            .HasMinLen(Descricao, 5, "descricao", "O nome não pode ter menos de 5 caracteres")
            .IsNotNullOrEmpty(Descricao, "Descricao", "O nome não pode ser nulo"));
             return Valid;

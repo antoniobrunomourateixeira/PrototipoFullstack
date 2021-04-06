@@ -12,15 +12,17 @@ namespace Prototype.Domain.Entities
 
         }
 
-        public Carrinho(Guid idProduto, int qtd, decimal valor)
+        public Carrinho(Guid idProduto, int qtd, decimal valor, string descricao)
         {
             this.Id_Produto = idProduto;
             this.Valor = valor;
             this.Quantidade = qtd;
+            this.Descricao = descricao;
         }
 
         public int Quantidade { get; set; }
         public decimal Valor { get; set; }
+        public string Descricao { get; set; }
         public Guid Id_Produto { get; set; }
         public Produto Produto { get; set; }
     }
