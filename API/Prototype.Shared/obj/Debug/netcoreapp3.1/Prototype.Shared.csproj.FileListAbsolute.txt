@@ -30,3 +30,12 @@ D:\Desenvolvimento\Projetos\Siteware\Sistema de Vendas\Backend\Prototype.Shared\
 D:\Desenvolvimento\Projetos\Siteware\Sistema de Vendas\Backend\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.csproj.CoreCompileInputs.cache
 D:\Desenvolvimento\Projetos\Siteware\Sistema de Vendas\Backend\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.dll
 D:\Desenvolvimento\Projetos\Siteware\Sistema de Vendas\Backend\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.pdb
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\bin\Debug\netcoreapp3.1\Prototype.Shared.deps.json
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\bin\Debug\netcoreapp3.1\Prototype.Shared.dll
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\bin\Debug\netcoreapp3.1\Prototype.Shared.pdb
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.csprojAssemblyReference.cache
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.AssemblyInfo.cs
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.dll
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.pdb

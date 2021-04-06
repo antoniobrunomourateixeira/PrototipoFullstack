@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prototype.Infra.Data;
 
 namespace Prototype.Infra.Data.Migrations
 {
     [DbContext(typeof(PrototypeDataContext))]
-    partial class PrototypeDataContextModelSnapshot : ModelSnapshot
+    [Migration("20210405212847_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,35 +70,6 @@ namespace Prototype.Infra.Data.Migrations
                     b.ToTable("Servidores");
                 });
 
-            modelBuilder.Entity("Prototype.Domain.Entities.Carrinho", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("Id_Produto")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("RegisterDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Id_Produto")
-                        .IsUnique();
-
-                    b.ToTable("Carrinho");
-                });
-
             modelBuilder.Entity("Prototype.Domain.Entities.Documento", b =>
                 {
                     b.Property<Guid>("Id")
@@ -149,7 +122,7 @@ namespace Prototype.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Ultima_Modificacao")
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 4, 5, 21, 0, 27, 776, DateTimeKind.Local).AddTicks(5570));
+                        .HasDefaultValue(new DateTime(2021, 4, 5, 18, 28, 47, 531, DateTimeKind.Local).AddTicks(5216));
 
                     b.Property<DateTime>("RegisterDate")
                         .HasColumnType("datetime2");
@@ -179,7 +152,7 @@ namespace Prototype.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Data_Tramitacao")
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 4, 5, 21, 0, 27, 783, DateTimeKind.Local).AddTicks(2348));
+                        .HasDefaultValue(new DateTime(2021, 4, 5, 18, 28, 47, 541, DateTimeKind.Local).AddTicks(5712));
 
                     b.Property<Guid?>("DocumentoId")
                         .HasColumnType("uniqueidentifier");
@@ -329,15 +302,6 @@ namespace Prototype.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("Prototype.Domain.Entities.Carrinho", b =>
-                {
-                    b.HasOne("Prototype.Domain.Entities.Produto", "Produto")
-                        .WithOne()
-                        .HasForeignKey("Prototype.Domain.Entities.Carrinho", "Id_Produto")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Prototype.Domain.Entities.Documento", b =>

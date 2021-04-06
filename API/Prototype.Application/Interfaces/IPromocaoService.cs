@@ -12,7 +12,8 @@ namespace Prototype.Application.Interfaces
    public interface IPromocaoService
    {
         ICommandResult CreatePromocao(CreatePromocaoCommand command);
-
+        ICommandResult UpdatePromocao(UpdatePromocaoCommand command);
+        ICommandResult DeletePromocao(Guid id);
         IQueryable<Promocao> ObterPromocaoPorId(Guid promocaoId);
         IQueryable<Promocao> ObterListDePromocoes();
    }

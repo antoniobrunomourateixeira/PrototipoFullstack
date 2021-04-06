@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Tests\\Prototype.Tests.csproj": {}
+    "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Tests\\Prototype.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Tests\\Prototype.Tests.csproj": {
+    "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Tests\\Prototype.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Tests\\Prototype.Tests.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Tests\\Prototype.Tests.csproj",
         "projectName": "Prototype.Tests",
-        "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Tests\\Prototype.Tests.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Tests\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Tests\\Prototype.Tests.csproj",
+        "packagesPath": "C:\\Users\\Bruno Moura\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Tests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bruno Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

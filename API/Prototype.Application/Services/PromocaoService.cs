@@ -32,6 +32,17 @@ namespace Prototype.Application.Services
 
         }
 
+        public ICommandResult UpdatePromocao(UpdatePromocaoCommand command)
+        {
+            command.Validate();
+
+            if (!command.Valid)
+                return new CommandResult(success: false, message: null, data: command.Notifications);
+
+            return _handler.Handle(command);
+
+        }
+
         public IQueryable<Promocao> ObterListDePromocoes()
         {
             try
@@ -44,6 +55,11 @@ namespace Prototype.Application.Services
             {
                 throw;
             }
+        }
+
+        public ICommandResult DeletePromocao(Guid id)
+        {
+            return _handler.Handle(id);
         }
 
         public IQueryable<Promocao> ObterPromocaoPorId(Guid promocaoId)

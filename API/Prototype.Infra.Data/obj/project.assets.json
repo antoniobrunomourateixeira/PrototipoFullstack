@@ -10002,19 +10002,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bruno\\.nuget\\packages\\": {}
+    "C:\\Users\\Bruno Moura\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
+      "projectUniqueName": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
       "projectName": "Prototype.Infra.Data",
-      "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
-      "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-      "outputPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\obj\\",
+      "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
+      "packagesPath": "C:\\Users\\Bruno Moura\\.nuget\\packages\\",
+      "outputPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bruno Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10028,8 +10032,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj": {
-              "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj"
+            "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj": {
+              "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj"
             }
           }
         }

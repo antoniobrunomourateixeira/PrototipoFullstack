@@ -26,5 +26,13 @@ namespace Prototype.Domain.Entities
         public bool Tem_Promocao { get; set; }
         public Guid? Id_Promocao { get; set; }
         public Promocao Promocao { get; set; }
+
+        public void UpdateProduto(string nome, decimal valor, bool temPromocao, Guid? idPromocao)
+        {
+            this.Nome = nome;
+            this.Valor = valor;
+            this.Tem_Promocao = temPromocao;
+            this.Id_Promocao = idPromocao;
+        }
     }
 }

@@ -60,3 +60,20 @@ D:\Desenvolvimento\Projetos\Siteware\Sistema de Vendas\Backend\Prototype.Infra.D
 D:\Desenvolvimento\Projetos\Siteware\Sistema de Vendas\Backend\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.dll
 D:\Desenvolvimento\Projetos\Siteware\Sistema de Vendas\Backend\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.pdb
 D:\Desenvolvimento\Projetos\Siteware\Sistema de Vendas\Backend\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.genruntimeconfig.cache
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.csprojAssemblyReference.cache
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.AssemblyInfo.cs
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Infra.Data.deps.json
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Infra.Data.runtimeconfig.json
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Infra.Data.runtimeconfig.dev.json
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Infra.Data.dll
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Infra.Data.pdb
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Domain.dll
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Shared.dll
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Domain.pdb
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\bin\Debug\netcoreapp3.1\Prototype.Shared.pdb
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.csproj.CopyComplete
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.dll
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.pdb
+D:\Desenvolvimento\Bruno\Projetos\PrototipoFullstack\API\Prototype.Infra.Data\obj\Debug\netcoreapp3.1\Prototype.Infra.Data.genruntimeconfig.cache

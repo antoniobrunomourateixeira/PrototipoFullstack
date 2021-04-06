@@ -54,5 +54,37 @@ namespace Prototype.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut]
+        [AllowAnonymous]
+        public IActionResult Update([FromBody] UpdatePromocaoCommand command)
+        {
+
+            try
+            {
+                var result = _service.UpdatePromocao(command);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            try
+            {
+                var result = _service.DeletePromocao(id);
+
+                if (result.Success) return Ok(result);
+                return BadRequest(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

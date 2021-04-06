@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype\\Prototype.Api.csproj": {}
+    "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype\\Prototype.Api.csproj": {}
   },
   "projects": {
-    "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Application\\Prototype.Application.csproj": {
+    "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Application\\Prototype.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Application\\Prototype.Application.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Application\\Prototype.Application.csproj",
         "projectName": "Prototype.Application",
-        "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Application\\Prototype.Application.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Application\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Application\\Prototype.Application.csproj",
+        "packagesPath": "C:\\Users\\Bruno Moura\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bruno Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj": {
-                "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj"
+              "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj"
               }
             }
           }
@@ -107,17 +110,20 @@
         }
       }
     },
-    "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj": {
+    "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj",
         "projectName": "Prototype.Domain",
-        "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj",
+        "packagesPath": "C:\\Users\\Bruno Moura\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bruno Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -131,8 +137,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Shared\\Prototype.Shared.csproj": {
-                "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Shared\\Prototype.Shared.csproj"
+              "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Shared\\Prototype.Shared.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Shared\\Prototype.Shared.csproj"
               }
             }
           }
@@ -202,17 +208,20 @@
         }
       }
     },
-    "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
+    "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
         "projectName": "Prototype.Infra.Data",
-        "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\Bruno Moura\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bruno Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -226,8 +235,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj": {
-                "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Domain\\Prototype.Domain.csproj"
+              "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Domain\\Prototype.Domain.csproj"
               }
             }
           }
@@ -307,17 +316,20 @@
         }
       }
     },
-    "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Shared\\Prototype.Shared.csproj": {
+    "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Shared\\Prototype.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Shared\\Prototype.Shared.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Shared\\Prototype.Shared.csproj",
         "projectName": "Prototype.Shared",
-        "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Shared\\Prototype.Shared.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Shared\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Shared\\Prototype.Shared.csproj",
+        "packagesPath": "C:\\Users\\Bruno Moura\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bruno Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -394,17 +406,20 @@
         }
       }
     },
-    "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype\\Prototype.Api.csproj": {
+    "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype\\Prototype.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype\\Prototype.Api.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype\\Prototype.Api.csproj",
         "projectName": "Prototype.Api",
-        "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype\\Prototype.Api.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype\\Prototype.Api.csproj",
+        "packagesPath": "C:\\Users\\Bruno Moura\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bruno Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -418,11 +433,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Application\\Prototype.Application.csproj": {
-                "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Application\\Prototype.Application.csproj"
+              "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Application\\Prototype.Application.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Application\\Prototype.Application.csproj"
               },
-              "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
-                "projectPath": "D:\\Desenvolvimento\\Projetos\\Siteware\\Sistema de Vendas\\Backend\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj"
+              "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Bruno\\Projetos\\PrototipoFullstack\\API\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj"
               }
             }
           }

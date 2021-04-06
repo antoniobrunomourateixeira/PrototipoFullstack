@@ -11,6 +11,8 @@ namespace Prototype.Application.Interfaces
     public interface IProdutoService
     {
         ICommandResult CreateProduto(CreateProdutoCommand command);
+        ICommandResult UpdateProduto(UpdateProdutoCommand command);
+        ICommandResult DeleteProduto(Guid id);
         IQueryable<Produto> ObterProdutoPorId(Guid produtoId);
         IQueryable<Produto> ObterListDeProdutos();
     }

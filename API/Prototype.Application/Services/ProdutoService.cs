@@ -64,5 +64,20 @@ namespace Prototype.Application.Services
                 return null;
             }
         }
+
+        public ICommandResult UpdateProduto(UpdateProdutoCommand command)
+        {
+            command.Validate();
+
+            if (!command.Valid)
+                return new CommandResult(success: false, message: null, data: command.Notifications);
+
+            return _handler.Handle(command);
+        }
+
+        public ICommandResult DeleteProduto(Guid id)
+        {
+            return _handler.Handle(id);
+        }
     }
 }
