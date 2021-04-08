@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListaProdutosModel } from 'app/shared/Model/Produto/ListaProdutosModel';
 import { ProdutoService } from 'app/shared/services/produto.service';
 import { VendaService } from 'app/shared/services/venda.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-venda',
@@ -13,11 +14,10 @@ export class VendaComponent implements OnInit {
   public listaProdutos: ListaProdutosModel[] = [];
   public qtd: number;
   
-  constructor(private _service : ProdutoService, private _carrinhoService: VendaService) { }
+  constructor(private _service : ProdutoService, private _carrinhoService: VendaService, private _toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getAll();
-    console.log('res')
   }
 
   public getAll() {
@@ -32,9 +32,28 @@ export class VendaComponent implements OnInit {
       id_Produto: item.Id
     }
 
+    var p =this.listaProdutos.indexOf(item);
+    this.listaProdutos[p].qtd = null;
+
     this._carrinhoService.adicionar(dados).subscribe(res => {
-      console.log(res);
+      if(res.Success) {
+        this.toastSuccess();
+      }
     })
+  }
+
+  public toastSuccess() {
+    this._toastr.success(
+      '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Item adicionado com sucesso!.</span>',
+      "",
+      {
+        timeOut: 4000,
+        closeButton: true,
+        enableHtml: true,
+        toastClass: "alert alert-success alert-with-icon",
+        positionClass: "toast-top-right"
+      }
+    );
   }
 
 }

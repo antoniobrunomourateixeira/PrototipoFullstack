@@ -23,6 +23,7 @@ import { CreateEditProdutoComponent } from './pages/produto/create-edit-produto/
 
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
+import { ItensCarrinhoComponent } from './pages/venda/itens-carrinho/itens-carrinho.component';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -33,7 +34,8 @@ registerLocaleData(ptBr);
     ProdutoComponent,
     VendaComponent,
     CreatEditPromocaoComponent,
-    CreateEditProdutoComponent
+    CreateEditProdutoComponent,
+    ItensCarrinhoComponent
   ],
   imports: [
     BrowserAnimationsModule,

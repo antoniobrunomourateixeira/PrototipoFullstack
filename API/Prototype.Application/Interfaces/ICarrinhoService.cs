@@ -11,7 +11,8 @@ namespace Prototype.Application.Interfaces
     public interface ICarrinhoService
     {
         ICommandResult AddItemAoCarrinho(AddNewItemCommand command);
-        IQueryable<Carrinho> ObterListaNoCarrinho();
+        ICommandResult UpdateItemCarrinho(UpdateItemCommand command);
+        List<Carrinho> ObterListaNoCarrinho();
         ICommandResult RemoverDoCarrinho(Guid id);
     }
 }

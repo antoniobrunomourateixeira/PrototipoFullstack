@@ -46,6 +46,22 @@ namespace Prototype.Api.Controllers
             }
         }
 
+        [HttpPut]
+        [AllowAnonymous]
+        public IActionResult Update([FromBody] UpdateItemCommand command)
+        {
+
+            try
+            {
+                var result = _service.UpdateItemCarrinho(command);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {

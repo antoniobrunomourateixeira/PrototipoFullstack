@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using AutoMapper.QueryableExtensions;
 namespace Prototype.Application.Services
 {
     public class CarrinhoService : ICarrinhoService
@@ -34,17 +34,42 @@ namespace Prototype.Application.Services
                 return new CommandResult(success: false, message: null, data: command.Notifications);
             #endregion
 
+            var produto = _uow.GetRepository<Carrinho>().GetFirstOrDefault(
+                 predicate: x => x.Id_Produto == command.Id_Produto &&
+                 x.Active == true);
+
+            if(produto != null)
+            {
+                var updateCarrinho = new UpdateItemCommand();
+                updateCarrinho.Id = produto.Id;
+                updateCarrinho.Quantidade = produto.Quantidade + command.Quantidade;
+                return this.UpdateItemCarrinho(updateCarrinho);
+            }
+
 
             return _handler.Handle(command);
         }
 
-        public IQueryable<Carrinho> ObterListaNoCarrinho()
+        public List<Carrinho> ObterListaNoCarrinho()
         {
             try
             {
-                var promocoes = _uow.GetRepository<Carrinho>().Get(predicate: x => x.Active == true);
+                var produto = _uow.GetRepository<Produto>().Get().OrderBy(x => x.Nome);
+                var itensCarrinho = _uow.GetRepository<Carrinho>().Get(predicate: x => x.Active == true);
 
-                return promocoes;
+                var itensCarrinhoWhere = new List<Carrinho>();
+                foreach (var item in itensCarrinho)
+                {
+                        var data = produto.Where(p => p.Id == item.Id_Produto);
+                        item.Produto = (Produto)data.FirstOrDefault();
+
+
+                    itensCarrinhoWhere.Add(item);
+                }
+
+                return itensCarrinhoWhere;
+
+                //return (IQueryable<Carrinho>)itensCarrinhoWhere;
             }
             catch (Exception ex)
             {
@@ -55,6 +80,16 @@ namespace Prototype.Application.Services
         public ICommandResult RemoverDoCarrinho(Guid id)
         {
             return _handler.Handle(id);
+        }
+
+        public ICommandResult UpdateItemCarrinho(UpdateItemCommand command)
+        {
+            command.Validate();
+
+            if (!command.Valid)
+                return new CommandResult(success: false, message: null, data: command.Notifications);
+
+            return _handler.Handle(command);
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Prototype.Application.Services
         {
             try
             {
-                var promocoes = _uow.GetRepository<Produto>().Get(predicate: x => x.Active == true);
+                var promocoes = _uow.GetRepository<Produto>().Get(predicate: x => x.Active == true).OrderBy(x => x.Nome).OrderBy(x => x.Tem_Promocao);
 
                 return promocoes;
             }

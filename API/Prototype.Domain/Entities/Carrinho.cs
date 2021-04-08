@@ -25,5 +25,13 @@ namespace Prototype.Domain.Entities
         public string Descricao { get; set; }
         public Guid Id_Produto { get; set; }
         public Produto Produto { get; set; }
+
+        public void UpdateItemCarrinho(Guid idProduto, int qtd, decimal valor, string descricao)
+        {
+            this.Id_Produto = idProduto;
+            this.Valor = valor;
+            this.Quantidade = qtd;
+            this.Descricao = descricao;
+        }
     }
 }

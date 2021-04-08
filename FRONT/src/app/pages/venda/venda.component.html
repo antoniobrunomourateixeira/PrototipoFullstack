@@ -1,26 +1,33 @@
+<a class="btn" routerLink="/itensVenda">
+    <i class="nc-icon nc-bullet-list-67"></i> Visualizar itens do carrinho
+</a>
+
 <div class="row">
     <div class="col-md-4" *ngFor="let item of listaProdutos">
       <div class="card">
         <div class="card-header">
             <div class="row">
                 <div class="col-12">
-                    <h5 class="card-title"> {{item.Nome}} </h5>
+                    <h5 class="card-title"><i class="nc-app nc-icon"></i> {{item.Nome}} </h5>
                 </div>
                 <div class="col-12">
                     <p class="card-title"> {{item.Valor | currency: 'BRL'}} </p>
-                    <p style="font-weight: bold; font-size: 12px;" *ngIf="item.Tem_Promocao"> {{item.Promocao.Descricao}}</p>
-                    <p style="font-weight: bold; font-size: 12px;" *ngIf="item.Tem_Promocao == false"> &nbsp; </p>
+                    <p style="font-weight: bold; font-size: 12px; color: #ff8d00;" *ngIf="item.Tem_Promocao">
+                        <i class="nc-icon nc-bookmark-2"></i> {{item.Promocao.Descricao}}
+                    </p>
+                    <p style="font-size: 12px;" *ngIf="item.Tem_Promocao == false"> <s>Sem promoção</s> </p>
                 </div>
             </div>
           
         </div>
         <div class="card-body">
             <div class="row">
+                  
                 <div class="col-md-8 pr-0"> 
                     <input placeholder="Quantidade" type="number" class="form-control" #input [(ngModel)]="item.qtd">    
                 </div>
                 <div class="col-md-4">
-                    <button class="btn btn-block btn-sm btn-outline-info mt-0" (click)="add(item)">
+                    <button class="btn btn-block btn-sm btn-outline-success mt-0" (click)="add(item)" placement="top" ngbTooltip="Adicionar ao Carrinho">
                         <i class="nc-icon nc-simple-add" style="font-weight: bold;"></i>
                     </button>
                 </div>
