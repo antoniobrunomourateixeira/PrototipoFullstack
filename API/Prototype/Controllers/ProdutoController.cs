@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
 using Prototype.Application.Interfaces;
 using Prototype.Domain.Commands.Input.Produto;
 using Prototype.Domain.Entities;
 using Prototype.Domain.Interfaces.IUnitOfWork;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -28,9 +30,30 @@ namespace Prototype.Api.Controllers
         [HttpGet()]
         public IActionResult GetAll()
         {
-            var promocao = _uow.GetRepository<Produto>().Get();
+            var promocao = _uow.GetRepository<Promocao>().Get();
+            var produto = _uow.GetRepository<Produto>().Get().Include(p => promocao);
 
-            return Ok(promocao);
+            var produtoWhere = new List<Produto>();
+            foreach (var item in produto)
+            {
+                if (item.Tem_Promocao)
+                {
+                    var data = promocao.Where(p => p.Id == item.Id_Promocao.GetValueOrDefault());
+                    item.Promocao = (Promocao)data.FirstOrDefault();
+                }
+
+                produtoWhere.Add(item);
+            }
+
+            return Ok(produtoWhere);
+        }
+
+        [HttpGet("{Id}")]
+        public IActionResult GetById(Guid Id)
+        {
+            var promocaoUnica = _service.ObterProdutoPorId(Id);
+
+            return Ok(promocaoUnica);
         }
 
         [HttpPost]

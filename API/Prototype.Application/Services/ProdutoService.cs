@@ -49,11 +49,11 @@ namespace Prototype.Application.Services
             }
         }
 
-        public IQueryable<Produto> ObterProdutoPorId(Guid produtoId)
+        public Produto ObterProdutoPorId(Guid produtoId)
         {
             try
             {
-                var promocao = _uow.GetRepository<Produto>().Get(
+                var promocao = _uow.GetRepository<Produto>().GetFirstOrDefault(
                  predicate: x => x.Id == produtoId &&
                  x.Active == true);
 

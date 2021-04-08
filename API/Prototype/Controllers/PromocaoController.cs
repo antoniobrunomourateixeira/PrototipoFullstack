@@ -32,9 +32,9 @@ namespace Prototype.Api.Controllers
         }
 
         [HttpGet("{Id}")]
-        public IActionResult GetById(Guid promocaoId)
+        public IActionResult GetById(Guid Id)
         {
-            var promocaoUnica = _service.ObterPromocaoPorId(promocaoId);
+            var promocaoUnica = _service.ObterPromocaoPorId(Id);
 
             return Ok(promocaoUnica);
         }
