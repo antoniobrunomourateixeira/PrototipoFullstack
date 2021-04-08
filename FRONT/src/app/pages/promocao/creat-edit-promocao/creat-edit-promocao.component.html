@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-user">
+            <div class="card-header">
+                <h5 class="card-title">{{text}}</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="formPromocao" (ngSubmit)="gravar()">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Descrição <span class="required">*</span></label>
+                                <input type="text" class="form-control" placeholder="Ex: Leve 3 e Pague 1" formControlName="descricao">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 pr-1">
+                            <div class="form-group">
+                                <label>Leve <span class="required">*</span></label>
+                                <input type="text" class="form-control" placeholder="Ex: 3" formControlName="leve">
+                            </div>
+                        </div>
+                        <div class="col-md-4 pr-1">
+                            <div class="form-group">
+                                <label>Pague</label>
+                                <input type="text" class="form-control" placeholder="Ex: 1" formControlName="pague">
+                            </div>
+                        </div>
+                        <div class="col-md-4 pr-1">
+                            <div class="form-group">
+                                <label>Preço</label>
+                                <input type="text" class="form-control" placeholder="Ex: 0,00" formControlName="valor" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="float: right;">
+                        <div class="update">
+                            <button type="submit" class="btn btn-primary" [disabled]="formPromocao.invalid">Cadastrar</button>
+                            <a type="submit" class="btn btn-danger ml-2 mr-2" routerLink="/promocao">Cancelar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

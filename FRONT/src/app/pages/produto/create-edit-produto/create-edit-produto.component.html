@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-user">
+            <div class="card-header">
+                <h5 class="card-title">{{text}}</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="formProduto" (ngSubmit)="gravar()">
+                    <div class="row">
+                        <div class="col-md-8 pr-1">
+                            <div class="form-group">
+                                <label>Nome <span class="required">*</span></label>
+                                <input type="text" class="form-control" formControlName="nome">
+                            </div>
+                        </div>
+                        <div class="col-md-2 pr-1">
+                            <div class="form-group">
+                                <label>Valor</label>
+                                <input type="text" class="form-control" placeholder="Ex: 0,00" formControlName="valor" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }">
+                            </div>
+                        </div>
+                        <div class="col-md-2 ">
+                            <div class="form-group">
+                                <label>Tem Promoção</label>
+                                <select class="form-control" formControlName="tem_promocao" (change)="loadPromocao()">
+                                    <option value="N">Não</option>
+                                    <option value="S">Sim</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <select class="form-control" formControlName="id_promocao" *ngIf="formProduto.value.tem_promocao == 'S'">
+                                    <option *ngFor="let item of listaPromocoes" [value]="item.Id">{{item.Descricao}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="float: right;">
+                        <div class="update">
+                            <button type="submit" class="btn btn-primary" [disabled]="formProduto.invalid">Cadastrar</button>
+                            <a type="submit" class="btn btn-danger ml-2 mr-2" routerLink="/produto">Cancelar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
