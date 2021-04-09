@@ -32,8 +32,8 @@ export class CreatEditPromocaoComponent implements OnInit {
       id: [''],
       descricao: ['', Validators.required],
       leve: ['', Validators.required],
-      pague: [''],
-      valor: ['']
+      pague: [0],
+      valor: [0]
     })
   }
 

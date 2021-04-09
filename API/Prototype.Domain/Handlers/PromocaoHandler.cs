@@ -22,7 +22,7 @@ namespace Prototype.Domain.Handlers
         {
             try
             {
-                var promocao = new Promocao (command.Descricao, command.Leve, command.Pague, command.Valor);
+                var promocao = new Promocao (command.Descricao, command.Leve, Convert.ToInt32(command.Pague), command.Valor);
 
                 _uow.GetRepository<Promocao>()
                     .Save(promocao);

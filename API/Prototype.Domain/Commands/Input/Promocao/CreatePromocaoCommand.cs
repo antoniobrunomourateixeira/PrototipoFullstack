@@ -8,8 +8,8 @@ namespace Prototype.Domain.Commands.Input.Promocao
     {
         public string Descricao { get; set; }
         public int Leve { get; set; }
-        public int Pague { get; set; }
-        public decimal Valor { get; set; } = 0;
+        public int? Pague { get; set; }
+        public decimal Valor { get; set; }
 
         public bool Validate()
         {
