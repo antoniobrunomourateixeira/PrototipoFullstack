@@ -27,6 +27,7 @@ export class PromocaoComponent implements OnInit {
     this._spinner.show();
     this._service.getPromocoes().subscribe(res => {
       this.listaPromocoes = res;
+      if(res.length <= 0) {this.toastInfo('Nenhuma promoção localizada')}
       this._spinner.hide();
     }, err => {
       this._spinner.hide();
@@ -62,7 +63,7 @@ export class PromocaoComponent implements OnInit {
   }
 
   public toastInfo(text) {
-    this._toastr.success(
+    this._toastr.warning(
       '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">'+text+'!.</span>',
       "",
       {

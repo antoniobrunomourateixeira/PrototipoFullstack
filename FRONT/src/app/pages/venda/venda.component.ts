@@ -31,6 +31,7 @@ export class VendaComponent implements OnInit {
     this._service.getPromocoes().subscribe(res => {
       this._spinner.hide();
       this.listaProdutos = res;
+      if(res.length <= 0) {this.toastInfo('Nenhum produto cadsatrado')}
     })
   }
 
@@ -65,5 +66,20 @@ export class VendaComponent implements OnInit {
       }
     );
   }
+
+  public toastInfo(text) {
+    this._toastr.success(
+      '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">'+text+'!.</span>',
+      "",
+      {
+        timeOut: 4000,
+        closeButton: true,
+        enableHtml: true,
+        toastClass: "alert alert-warning alert-with-icon",
+        positionClass: "toast-top-right"
+      }
+    );
+  }
+
 
 }

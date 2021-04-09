@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20210404214051_MigrationInit.cs" />
-    <Compile Remove="Migrations\20210404214051_MigrationInit.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="DataContexts\" />
     <Folder Include="DataModels\" />
   </ItemGroup>

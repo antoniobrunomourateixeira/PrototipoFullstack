@@ -14,11 +14,9 @@ namespace Prototype.Infra.Data
             Database.AutoTransactionsEnabled = false;
         }
 
-
-        public DbSet<User> Users { get; set; }
-        public DbSet<Documento> Documentos { get; set; }
-        public DbSet<ProcessoTramitacao> Tramitacao { get; set; }
-        public DbSet<BeneficioServidor> BeneficioServidores { get; set; }
+        public DbSet<Promocao> Promocoes { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Carrinho> Carrinho { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

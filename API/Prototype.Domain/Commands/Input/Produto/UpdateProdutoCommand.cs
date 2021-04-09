@@ -1,11 +1,7 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
-using Prototype.Domain.Entities;
-using Prototype.Domain.Enums;
 using Prototype.Shared.Commands;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Prototype.Domain.Commands.Input.Produto
 {

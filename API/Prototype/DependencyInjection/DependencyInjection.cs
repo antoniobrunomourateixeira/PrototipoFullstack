@@ -1,19 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Prototype.Application.Interfaces;
 using Prototype.Application.Services;
-using Prototype.Domain.Entities;
 using Prototype.Domain.Handlers;
-using Prototype.Domain.Interfaces;
 using Prototype.Domain.Interfaces.IUnitOfWork;
 using Prototype.Infra.Data;
 using Prototype.Infra.Data.Interfaces;
 using Prototype.Infra.Data.UnitOfWork;
 using Prototype.Shared.Auth;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Prototype.Api.DependencyInjection
 {
@@ -28,9 +21,6 @@ namespace Prototype.Api.DependencyInjection
 
         static void ServicesDependencies(IServiceCollection services)
         {
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IServidorService, ServidorService>();
-            services.AddScoped<IDocumentoService, DocumentoService>();
             services.AddScoped<IPromocaoService, PromocaoService>();
             services.AddScoped<IProdutoService, ProdutoService>();
             services.AddScoped<ICarrinhoService, CarrinhoService>();
@@ -40,8 +30,6 @@ namespace Prototype.Api.DependencyInjection
 
         static void HandlresDependecies(IServiceCollection services)
         {
-            services.AddScoped<BeneficioServidorHandler, BeneficioServidorHandler>();
-            services.AddScoped<DocumentoHandler, DocumentoHandler>();
             services.AddScoped<PromocaoHandler, PromocaoHandler>();
             services.AddScoped<ProdutoHandler, ProdutoHandler>();
             services.AddScoped<CarrinhoHandler, CarrinhoHandler>();

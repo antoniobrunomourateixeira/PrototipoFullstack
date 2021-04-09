@@ -32,6 +32,7 @@ export class ItensCarrinhoComponent implements OnInit {
     this._service.getAll().subscribe(res => {
       this._spinner.hide();
       this.listaItens = res;
+      if(res.length <= 0) {this.toastInfo('Nenhum item no carrinho')}
     })
   }
 

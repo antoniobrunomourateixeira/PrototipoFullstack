@@ -28,6 +28,7 @@ export class ProdutoComponent implements OnInit {
     this._spinner.show();
     this._service.getPromocoes().subscribe(res => {
       this._spinner.hide();
+      if(res.length <= 0) {this.toastInfo('Nenhuma produto localizado')}
       this.listaProdutos = res;
     })
   }
