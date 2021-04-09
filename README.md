@@ -78,3 +78,14 @@ Para deploy windows:
   2 - Apontar o caminho da API na classe **src\shared\Utils.ts** no método **hostApi()**
   3 - Após todos os módulos instalados via node, rodar o comando **ng build --prod**. Dentro da pasta da aplicação será criada 
       uma subpasta com o nome **dist** seu conteúdo é o necessário para o deploy da aplicação.
+      
+**IMAGENS**
+![Screenshot-1](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/1%20-%20Tela%20Cadastro%20Promoçao.jpg)
+![Screenshot-2](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/2%20-%20Listagem%20das%20promoções.jpg)
+![Screenshot-3](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/3%20-%20Edição%20Promoção.jpg)
+![Screenshot-4](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/4%20-%20Cadastro%20de%20Produto.jpg)
+![Screenshot-5](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/5%20-%20Listagem%20dos%20produtos.jpg)
+![Screenshot-6](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/6%20-%20Tela%20de%20venda.jpg)
+![Screenshot-7](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/7%20-%20Visualizar%20itens%20do%20Carrinho.jpg)
+![Screenshot-8](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/8%20-%20Editar%20item%20do%20carrinho.jpg)
+![Screenshot-9](https://github.com/antoniobrunomourateixeira/PrototipoFullstack/blob/main/FRONT/9%20-%20Lista%20carrinho%20apos%20atualizar.jpg)
