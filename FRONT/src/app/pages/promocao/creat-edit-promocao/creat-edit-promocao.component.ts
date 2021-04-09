@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PromocaoService } from 'app/shared/services/promocao.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -18,7 +19,8 @@ export class CreatEditPromocaoComponent implements OnInit {
     private _service : PromocaoService,
     private _router: Router,
     private _toastr: ToastrService,
-    private _activateRoute: ActivatedRoute
+    private _activateRoute: ActivatedRoute,
+    private _spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -37,8 +39,9 @@ export class CreatEditPromocaoComponent implements OnInit {
 
   public getId(id) {
     this.text = "Editar Promoção";
+    this._spinner.show();
     this._service.getId(id).subscribe(res => {
-      console.log(res)
+      this._spinner.hide();
       this.formPromocao.patchValue({
         id: res[0].Id,
         descricao: res[0].Descricao,
@@ -58,7 +61,9 @@ export class CreatEditPromocaoComponent implements OnInit {
   }
 
   private Cadastrar() {
+    this._spinner.show();
     this._service.create(this.formPromocao.value).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this.toastSuccess("cadastrada");
         this._router.navigateByUrl("/promocao");
@@ -67,7 +72,9 @@ export class CreatEditPromocaoComponent implements OnInit {
   }
 
   private Editar() {
+    this._spinner.show();
     this._service.update(this.formPromocao.value).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this.toastSuccess("alterada");
         this._router.navigateByUrl("/promocao");

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ListaCarrinhoModel } from 'app/shared/Model/Carrinho/ListaCarrinhoModel';
 import { VendaService } from 'app/shared/services/venda.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -19,7 +20,7 @@ export class ItensCarrinhoComponent implements OnInit {
     private _service: VendaService,
     private _toastr: ToastrService,
     private modalService: NgbModal,
-    private _modalService: NgbModal
+    private _spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -27,7 +28,9 @@ export class ItensCarrinhoComponent implements OnInit {
   }
 
   public getAll() {
+    this._spinner.show();
     this._service.getAll().subscribe(res => {
+      this._spinner.hide();
       this.listaItens = res;
     })
   }
@@ -41,7 +44,9 @@ export class ItensCarrinhoComponent implements OnInit {
   }
 
   public delete(id) {
+    this._spinner.show();
     this._service.delete(id).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this.getAll();
         this.toastSuccess();
@@ -92,7 +97,9 @@ export class ItensCarrinhoComponent implements OnInit {
       quantidade: this.qtdAlter
     };
 
+    this._spinner.show();
     this._service.update(dados).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this.toastSuccessEdi("alterado");
         this.getAll();

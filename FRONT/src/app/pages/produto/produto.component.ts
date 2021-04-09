@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ListaProdutosModel } from 'app/shared/Model/Produto/ListaProdutosModel';
 import { ProdutoService } from 'app/shared/services/produto.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -15,7 +16,8 @@ export class ProdutoComponent implements OnInit {
   constructor(
     private _service : ProdutoService,
     private _router: Router,
-    private _toastr: ToastrService) { }
+    private _toastr: ToastrService,
+    private _spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.getAll();
@@ -23,13 +25,17 @@ export class ProdutoComponent implements OnInit {
   }
 
   public getAll() {
+    this._spinner.show();
     this._service.getPromocoes().subscribe(res => {
+      this._spinner.hide();
       this.listaProdutos = res;
     })
   }
 
   public delete(id) {
+    this._spinner.show();
     this._service.delete(id).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this.getAll();
         this.toastSuccess();

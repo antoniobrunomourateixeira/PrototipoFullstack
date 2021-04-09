@@ -34,7 +34,9 @@ export class PromocaoComponent implements OnInit {
   }
 
   public delete(id) {
+    this._spinner.show();
     this._service.delete(id).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this.getAll();
         this.toastSuccess();

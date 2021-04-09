@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ListaPromocaoModel } from 'app/shared/Model/Promocao/ListaPromocaoModel';
 import { ProdutoService } from 'app/shared/services/produto.service';
 import { PromocaoService } from 'app/shared/services/promocao.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -22,7 +23,8 @@ export class CreateEditProdutoComponent implements OnInit {
     private _service : ProdutoService,
     private _router: Router,
     private _toastr: ToastrService,
-    private _activateRoute: ActivatedRoute
+    private _activateRoute: ActivatedRoute,
+    private _spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -43,15 +45,18 @@ export class CreateEditProdutoComponent implements OnInit {
   }
 
   public loadPromocao() {
+    this._spinner.show();
     this._servicePromo.getPromocoes().subscribe( res => {
+      this._spinner.hide();
       this.listaPromocoes = res;
     })
   }
 
   public getId(id) {
     this.text = "Editar Produto";
+    this._spinner.show();
     this._service.getId(id).subscribe(res => {
-      console.log(res)
+      this._spinner.hide();
       this.formProduto.patchValue({
         id: res.Id,
         nome: res.Nome,
@@ -71,13 +76,12 @@ export class CreateEditProdutoComponent implements OnInit {
   }
 
   private Cadastrar() {
-    console.log(this.formProduto.value);
-    return;
-
     this.formProduto.patchValue({
       tem_promocao: this.formProduto.value.tem_promocao == 'S' ? true : false
     })
+    this._spinner.show();
     this._service.create(this.formProduto.value).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this.toastSuccess("cadastrado");
         this._router.navigateByUrl("/produto");
@@ -89,7 +93,9 @@ export class CreateEditProdutoComponent implements OnInit {
     this.formProduto.patchValue({
       tem_promocao: this.formProduto.value.tem_promocao == 'S' ? true : false
     })
+    this._spinner.show();
     this._service.update(this.formProduto.value).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this._router.navigateByUrl("/produto");
         this.toastSuccess("alterado");

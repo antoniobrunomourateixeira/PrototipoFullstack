@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListaProdutosModel } from 'app/shared/Model/Produto/ListaProdutosModel';
 import { ProdutoService } from 'app/shared/services/produto.service';
 import { VendaService } from 'app/shared/services/venda.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -14,14 +15,21 @@ export class VendaComponent implements OnInit {
   public listaProdutos: ListaProdutosModel[] = [];
   public qtd: number;
   
-  constructor(private _service : ProdutoService, private _carrinhoService: VendaService, private _toastr: ToastrService) { }
+  constructor(
+    private _service : ProdutoService, 
+    private _carrinhoService: VendaService, 
+    private _toastr: ToastrService,
+    private _spinner: NgxSpinnerService
+  ) { }
 
   ngOnInit(): void {
     this.getAll();
   }
 
   public getAll() {
+    this._spinner.show();
     this._service.getPromocoes().subscribe(res => {
+      this._spinner.hide();
       this.listaProdutos = res;
     })
   }
@@ -35,7 +43,9 @@ export class VendaComponent implements OnInit {
     var p =this.listaProdutos.indexOf(item);
     this.listaProdutos[p].qtd = null;
 
+    this._spinner.show();
     this._carrinhoService.adicionar(dados).subscribe(res => {
+      this._spinner.hide();
       if(res.Success) {
         this.toastSuccess();
       }
