@@ -33,6 +33,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <select class="form-control" formControlName="id_promocao" *ngIf="formProduto.value.tem_promocao == 'S'">
+                                    <option value=""> Selecione uma promoção... </option>
                                     <option *ngFor="let item of listaPromocoes" [value]="item.Id">{{item.Descricao}}</option>
                                 </select>
                             </div>

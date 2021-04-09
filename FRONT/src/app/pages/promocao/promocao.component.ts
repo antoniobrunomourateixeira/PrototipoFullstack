@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ListaPromocaoModel } from 'app/shared/Model/Promocao/ListaPromocaoModel';
 import { PromocaoService } from 'app/shared/services/promocao.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Toast, ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -15,16 +16,20 @@ export class PromocaoComponent implements OnInit {
   constructor(
     private _service : PromocaoService,
     private _router: Router,
-    private _toastr: ToastrService) { }
+    private _toastr: ToastrService,
+    private _spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.getAll();
-    console.log('res')
   }
 
   public getAll() {
+    this._spinner.show();
     this._service.getPromocoes().subscribe(res => {
       this.listaPromocoes = res;
+      this._spinner.hide();
+    }, err => {
+      this._spinner.hide();
     })
   }
 

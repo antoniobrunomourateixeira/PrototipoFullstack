@@ -20,6 +20,7 @@ import { CreatEditPromocaoComponent } from './pages/promocao/creat-edit-promocao
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CurrencyMaskModule } from "ng2-currency-mask";
 import { CreateEditProdutoComponent } from './pages/produto/create-edit-produto/create-edit-produto.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
@@ -50,7 +51,8 @@ registerLocaleData(ptBr);
     FormsModule,
     FixedPluginModule,
     HttpClientModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    NgxSpinnerModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' },],
   bootstrap: [AppComponent]

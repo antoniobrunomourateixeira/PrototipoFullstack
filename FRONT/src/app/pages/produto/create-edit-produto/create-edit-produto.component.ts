@@ -37,7 +37,7 @@ export class CreateEditProdutoComponent implements OnInit {
       id: [''],
       nome: ['', Validators.required],
       valor: ['', Validators.required],
-      tem_promocao: [''],
+      tem_promocao: ['N'],
       id_promocao: ['']
     })
   }
@@ -71,6 +71,9 @@ export class CreateEditProdutoComponent implements OnInit {
   }
 
   private Cadastrar() {
+    console.log(this.formProduto.value);
+    return;
+
     this.formProduto.patchValue({
       tem_promocao: this.formProduto.value.tem_promocao == 'S' ? true : false
     })
