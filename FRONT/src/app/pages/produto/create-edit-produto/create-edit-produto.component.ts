@@ -76,6 +76,8 @@ export class CreateEditProdutoComponent implements OnInit {
   }
 
   private Cadastrar() {
+    if(this.verificaPromocao()) return false;
+
     this.formProduto.patchValue({
       tem_promocao: this.formProduto.value.tem_promocao == 'S' ? true : false
     })
@@ -85,11 +87,15 @@ export class CreateEditProdutoComponent implements OnInit {
       if(res.Success) {
         this.toastSuccess("cadastrado");
         this._router.navigateByUrl("/produto");
+      } else {
+        this.toastInfo(res.Message)
       }
     })
   }
 
   private Editar() {
+    if(this.verificaPromocao()) return false;
+
     this.formProduto.patchValue({
       tem_promocao: this.formProduto.value.tem_promocao == 'S' ? true : false
     })
@@ -99,8 +105,19 @@ export class CreateEditProdutoComponent implements OnInit {
       if(res.Success) {
         this._router.navigateByUrl("/produto");
         this.toastSuccess("alterado");
+      } else {
+        this.toastInfo(res.Message)
       }
     })
+  }
+
+  public verificaPromocao(): boolean {
+    var dados = this.formProduto.value;
+    if(dados.tem_promocao == 'S' && !dados.id_promocao) {
+      this.toastInfo("Nenhuma promoção selecionada");
+      return true;
+    } 
+    return false;
   }
 
   public toastSuccess(text) {
@@ -116,5 +133,21 @@ export class CreateEditProdutoComponent implements OnInit {
       }
     );
   }
+
+  
+  public toastInfo(text) {
+    this._toastr.success(
+      '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">'+text+'!.</span>',
+      "",
+      {
+        timeOut: 4000,
+        closeButton: true,
+        enableHtml: true,
+        toastClass: "alert alert-warning alert-with-icon",
+        positionClass: "toast-top-right"
+      }
+    );
+  }
+
 
 }
