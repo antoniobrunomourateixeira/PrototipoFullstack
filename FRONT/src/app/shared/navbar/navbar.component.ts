@@ -48,8 +48,18 @@ export class NavbarComponent implements OnInit{
         return "Nova Promoção"
       }
 
+      if(titlee == "/novoProduto") {
+        return "Produto"
+      }
+      if(titlee == "/itensVenda") {
+        return "Carrinho"
+      }
+
       if(titlee.includes("editarPromocao")) {
         return "Editar Promoção"
+      }
+      if(titlee.includes("editarProduto")) {
+        return "Produto"
       }
       return 'Dashboard';
     }
